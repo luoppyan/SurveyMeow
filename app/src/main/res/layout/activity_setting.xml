@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".SettingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_editTitle"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#0DFFFFFF"
+        >
+
+        <TextView
+            android:id="@+id/text_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Profile Setting"
+            android:textColor="#D9FFFFFF"
+            android:textSize="20sp"
+            android:fontFamily="@font/sfuid_regular"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/backBtn_setting"
+            android:gravity="center_vertical"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:alpha="0.7"
+            android:backgroundTint="#ffffff"
+            android:background="@drawable/back_arrow_black"
+            style="@style/Widget.AppCompat.Button.Borderless" />
+
+        <Button
+            android:id="@+id/applyBtn_profile"
+            android:layout_gravity="end"
+            android:layout_marginEnd="0dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/sfuid_regular"
+            style="@style/Widget.AppCompat.Button.Borderless" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <View
+        android:id="@+id/lineTop_setting"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar_editTitle"
+        android:layout_marginTop="0dp"
+        android:alpha=".50"
+        android:background="#33000000" />
+
+
+    <ImageView
+        android:id="@+id/avatars_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/lineTop_setting"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        tools:srcCompat="@drawable/avatar_male" />
+
+
+    <ImageView
+        android:id="@+id/line1"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avatars_image"
+        android:layout_toStartOf="@+id/genderHint"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:alpha=".60"
+        android:src="@drawable/line" />
+
+    <TextView
+        android:id="@+id/genderHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avatars_image"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/sfuid_regular"
+        android:text="Choose Your Gender"/>
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avatars_image"
+        android:layout_toEndOf="@+id/genderHint"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:alpha=".60"
+        android:src="@drawable/line" />
+
+
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genderHint"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:checked="true"
+            android:textColor="#CCFFFFFF"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/sfuid_regular"
+            android:alpha=".80"
+            android:buttonTint="#ffffff"/>
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20ssp"
+            android:text="Female"
+            android:checked="false"
+            android:textColor="#CCFFFFFF"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/sfuid_regular"
+            android:alpha=".80"
+            android:buttonTint="#F596BA"/>
+
+    </RadioGroup>
+
+
+
+    <ImageView
+        android:id="@+id/line3"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioSex"
+        android:layout_toStartOf="@+id/usernameHint"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:alpha=".60"
+        android:src="@drawable/line" />
+
+    <TextView
+        android:id="@+id/usernameHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioSex"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/sfuid_regular"
+        android:text="Change Your Username"/>
+
+    <ImageView
+        android:id="@+id/line4"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioSex"
+        android:layout_toEndOf="@+id/usernameHint"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:alpha=".60"
+        android:src="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/usernameRectangle"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_below="@+id/usernameHint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:alpha=".75"
+        android:src="@drawable/edittext_bg" />
+
+    <EditText
+        android:id="@+id/username_profile"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/usernameHint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:hint="Username"
+        android:textColorHint="#80FFFFFF"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:fontFamily="@font/sfuid_thin"
+        android:singleLine="true"
+        android:background="@null"
+        android:textSize="@dimen/_11ssp"
+    />
+
+
+
+    <ImageView
+        android:id="@+id/line5"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernameRectangle"
+        android:layout_toStartOf="@+id/passwordHint"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:alpha=".60"
+        android:src="@drawable/line" />
+
+    <TextView
+        android:id="@+id/passwordHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernameRectangle"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/sfuid_regular"
+        android:text="Change Your Password"/>
+
+    <ImageView
+        android:id="@+id/line6"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernameRectangle"
+        android:layout_toEndOf="@+id/passwordHint"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:alpha=".60"
+        android:src="@drawable/line" />
+
+
+    <ImageView
+        android:id="@+id/passwordRectangle"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_below="@+id/passwordHint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:alpha=".75"
+        android:src="@drawable/edittext_bg" />
+
+    <EditText
+        android:id="@+id/change_password_profile"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/passwordHint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:hint="New Password"
+        android:textColorHint="#80FFFFFF"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:fontFamily="@font/sfuid_thin"
+        android:singleLine="true"
+        android:background="@null"
+        android:textSize="@dimen/_11ssp"
+        android:inputType="textPassword"/>
+
+    <ImageView
+        android:id="@+id/confirm_passwordRectangle"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_below="@+id/passwordRectangle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:alpha=".75"
+        android:src="@drawable/edittext_bg" />
+
+    <EditText
+        android:id="@+id/confirm_password_profile"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/passwordRectangle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:hint="Confirm New Password"
+        android:textColorHint="#80FFFFFF"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:fontFamily="@font/sfuid_thin"
+        android:singleLine="true"
+        android:background="@null"
+        android:textSize="@dimen/_11ssp"
+        android:inputType="textPassword"/>
+
+
+
+
+</RelativeLayout>

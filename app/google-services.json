@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "137769310530",
+    "firebase_url": "https://comp6442-group-project.firebaseio.com",
+    "project_id": "comp6442-group-project",
+    "storage_bucket": "comp6442-group-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137769310530:android:c96af5a8572714603c50db",
+        "android_client_info": {
+          "package_name": "com.meow.comp6442_groupproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "137769310530-elnuccjkbf5asrdliasse38q1kur8j9f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsemrXWn1B5C3IWqAXAXV0BW4Ck2vwRpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "137769310530-elnuccjkbf5asrdliasse38q1kur8j9f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

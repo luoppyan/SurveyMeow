@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/avatar_group_picker"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:tint="#FFFFFF"
+            app:srcCompat="@drawable/ic_group" />
+
+        <TextView
+            android:id="@+id/groupName_group_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GroupName"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right"
+            >
+
+            <CheckBox
+                android:id="@+id/group_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:buttonTint="#FFFFFF"
+                android:layout_marginRight="12dp"
+                android:checked="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

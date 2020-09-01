@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp">
+
+
+    <RelativeLayout
+        android:id="@+id/lly_option_editQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <EditText
+            android:id="@+id/etOption_editQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/addBtn_editQuestion"
+            android:backgroundTint="#ffffff"
+            android:hint="Enter Option"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#80FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/addBtn_editQuestion"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/removeBtn_editQuestion"
+            android:background="@drawable/ic_create"
+            android:backgroundTint="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <Button
+            android:id="@+id/removeBtn_editQuestion"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_remove"
+            android:backgroundTint="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

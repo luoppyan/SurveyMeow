@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icon_groupList"
+            android:layout_width="161dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_group"
+            android:tint="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/groupName_groupList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GroupName"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_14sdp"/>
+
+            <TextView
+                android:id="@+id/latestMessage_groupList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="latestMessage"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_10sdp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

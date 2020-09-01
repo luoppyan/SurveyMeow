@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    android:screenOrientation="portrait"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_45sdp"
+        android:text="@string/app_name"
+        android:textColor="#FFFFFF"
+        android:textSize="43sp"
+        android:fontFamily="@font/zzgf" />
+
+
+    <ImageView
+        android:id="@+id/line1"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appTitle"
+        android:layout_toStartOf="@+id/logInHint"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:alpha=".70"
+        android:src="@drawable/line" />
+
+    <TextView
+        android:id="@+id/logInHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appTitle"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/sfuid_thin"
+        android:alpha=".80"
+        android:text="Registration"/>
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appTitle"
+        android:layout_toEndOf="@+id/logInHint"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:alpha=".70"
+        android:src="@drawable/line" />
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logInHint"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_35sdp">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:checked="true"
+            android:textColor="#CCFFFFFF"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/sfuid_regular"
+            android:alpha=".80"
+            android:buttonTint="#ffffff"/>
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20ssp"
+            android:text="Female"
+            android:checked="false"
+            android:textColor="#CCFFFFFF"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/sfuid_regular"
+            android:alpha=".80"
+            android:buttonTint="#F596BA"/>
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/usernameRectangle"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/radioSex"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:alpha=".75"
+        android:src="@drawable/edittext_bg" />
+
+    <EditText
+        android:id="@+id/user_name_sign_up"
+        android:layout_width="@dimen/_210sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/radioSex"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:hint="Nickname"
+        android:textColorHint="#B2FFFFFF"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:fontFamily="@font/sfuid_thin"
+        android:singleLine="true"
+        android:background="@null"
+        />
+
+    <ImageView
+        android:id="@+id/emailRectangle"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/usernameRectangle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:alpha=".75"
+        android:src="@drawable/edittext_bg" />
+
+    <EditText
+        android:id="@+id/email_sign_up"
+        android:layout_width="@dimen/_210sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/usernameRectangle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:hint="Email address"
+        android:textColorHint="#B2FFFFFF"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:fontFamily="@font/sfuid_thin"
+        android:singleLine="true"
+        android:background="@null"
+        />
+
+    <ImageView
+        android:id="@+id/passwordRectangle"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/emailRectangle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:alpha=".75"
+        android:src="@drawable/edittext_bg" />
+
+    <EditText
+        android:id="@+id/password_sign_up"
+        android:layout_width="@dimen/_210sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/emailRectangle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:hint="Password"
+        android:textColorHint="#B2FFFFFF"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:fontFamily="@font/sfuid_thin"
+        android:singleLine="true"
+        android:background="@null"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/sign_up_button"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/passwordRectangle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Register"
+        android:textColor="#E6FFFFFF"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/sfuid_regular"
+        android:alpha=".70"
+        android:background="@drawable/login_rectangle"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+
+    <Button
+        android:id="@+id/goBackBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:alpha=".80"
+        android:text="Back to Log In"
+        android:textStyle="bold"
+        android:textColor="#E6FFFFFF"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/sfuid_regular"
+        android:textAllCaps="false"
+        android:background="@drawable/footer"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".BeforePostActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_beforePost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#0DFFFFFF"
+        >
+
+
+        <TextView
+            android:id="@+id/text_beforePost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Set Survey Properties"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/sfuid_regular"/>
+
+        <Button
+            android:id="@+id/backBtn_beforePost"
+            android:gravity="center_vertical"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:alpha="0.7"
+            android:backgroundTint="#ffffff"
+            android:background="@drawable/back_arrow_black"
+            style="@style/Widget.AppCompat.Button.Borderless" />
+
+
+        <Button
+            android:id="@+id/postBtn_beforePost"
+            android:layout_gravity="end"
+            android:layout_marginEnd="0dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="POST"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/sfuid_regular"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/lineTop_beforePost"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar_beforePost"
+        android:layout_marginTop="0dp"
+        android:alpha=".50"
+        android:background="#32000000" />
+
+    <TextView
+        android:id="@+id/hint1_beforePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lineTop_beforePost"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:text="Set Survey Type"
+        android:textAllCaps="true"
+        android:textColor="#059F90"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/sfuid_regular"/>
+
+    <RadioGroup
+        android:id="@+id/radioSurveyType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hint1_beforePost"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/radioPB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Public"
+            android:checked="true"
+            android:textColor="#CCFFFFFF"
+            android:textSize="16sp"
+            android:fontFamily="@font/sfuid_regular"
+            android:buttonTint="#ffffff"/>
+
+        <RadioButton
+            android:id="@+id/radioPV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20ssp"
+            android:text="Private"
+            android:checked="false"
+            android:textColor="#CCFFFFFF"
+            android:textSize="16sp"
+            android:fontFamily="@font/sfuid_regular"
+            android:buttonTint="#ffffff"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/hint2_beforePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioSurveyType"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:text="Set Survey Close Date"
+        android:textAllCaps="true"
+        android:textColor="#059F90"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/sfuid_regular"/>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/hint2_beforePost"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="#A7E6A0BB"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp">
+
+        <TextView
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:paddingLeft="20dp"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/sfuid_regular"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:screenOrientation="portrait"
+    tools:context=".EditQuestionActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_editQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#0DFFFFFF"
+        >
+
+
+        <TextView
+            android:id="@+id/text_editQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Edit Question"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/sfuid_regular"/>
+
+        <Button
+            android:id="@+id/backBtn_editQuestion"
+            android:gravity="center_vertical"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:alpha="0.7"
+            android:backgroundTint="#ffffff"
+            android:background="@drawable/back_arrow_black"
+            style="@style/Widget.AppCompat.Button.Borderless"  />
+
+
+        <Button
+            android:id="@+id/saveBtn_editQuestion"
+            android:layout_gravity="end"
+            android:layout_marginEnd="0dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/sfuid_regular"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/lineTop_editQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar_editQuestion"
+        android:layout_marginTop="0dp"
+        android:alpha=".50"
+        android:background="#33000000" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lineTop_editQuestion"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/hint1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lineTop_editQuestion"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Quesiton Title"
+                android:textAllCaps="true"
+                android:textColor="#059F90"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/sfuid_regular"/>
+
+            <EditText
+                android:id="@+id/ET_question"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hint1"
+                android:layout_gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="#ffffff"
+                android:hint="Enter Question Title"
+                android:textColorHint="#80FFFFFF"
+                android:textColor="#ffffff"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/hint2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ET_question"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:text="Options"
+                android:textAllCaps="true"
+                android:textColor="#00A897"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/sfuid_regular"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_editQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hint2" />
+
+            <TextView
+                android:id="@+id/hint3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyclerView_editQuestion"
+                android:layout_marginLeft="20dp"
+                android:text="Question type"
+                android:textAllCaps="true"
+                android:textColor="#00A897"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/sfuid_regular"/>
+
+            <RadioGroup
+                android:id="@+id/radioType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hint3"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:id="@+id/radioMC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Single-select"
+                    android:checked="true"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/sfuid_regular"
+                    android:buttonTint="#ffffff"/>
+
+                <RadioButton
+                    android:id="@+id/radioCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20ssp"
+                    android:text="Multi-select"
+                    android:checked="false"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/sfuid_regular"
+                    android:buttonTint="#F596BA"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:screenOrientation="portrait"
+    tools:context=".HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#0DFFFFFF">
+
+
+        <TextView
+            android:id="@+id/text_profiletitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Profile"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/sfuid_regular"/>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <View
+        android:id="@+id/lineTop_profile"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar_profile"
+        android:layout_marginTop="0dp"
+        android:alpha=".50"
+        android:background="#4D000000" />
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="130dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/lineTop_profile"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/avatar_male" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_below="@+id/avatar"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/title_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Username"
+                android:layout_marginStart="15dp"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Username"
+                android:textAlignment="textEnd"
+                android:layout_marginEnd="15dp"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="10dp"
+            android:alpha=".70"
+            android:background="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/title_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Email"
+                android:layout_marginStart="15dp"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Email"
+                android:textAlignment="textEnd"
+                android:layout_marginEnd="15dp"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="10dp"
+            android:alpha=".70"
+            android:background="#FFFFFF" />
+
+        <Button
+            android:id="@+id/title_setting"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:text="Profile Setting"
+            android:background="#33FFFFFF"
+            android:fontFamily="@font/sfuid_regular"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_14ssp"
+            android:gravity="start|center_vertical"
+            android:paddingStart="30dp"
+            android:drawableEnd="@drawable/arrow"
+            android:paddingEnd="20dp" />
+
+        <Button
+            android:id="@+id/logoff"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:alpha=".80"
+            android:text="Sign Out"
+            android:background="#B2F5AFCA"
+            android:fontFamily="@font/sfuid_regular"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/_14ssp"
+            android:gravity="left|center_vertical"
+            android:paddingStart="30dp"
+            android:drawableEnd="@drawable/exit"
+            android:paddingEnd="20dp" />
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

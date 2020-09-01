@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:screenOrientation="portrait"
+    tools:context=".MySurveyFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_mySurvey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#0DFFFFFF"
+        >
+
+
+        <TextView
+            android:id="@+id/text_mySurveyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="My Survey"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/sfuid_regular"/>
+
+
+        <Button
+            android:id="@+id/createBtn"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@drawable/ic_plus"
+            android:gravity="center_vertical"
+            android:backgroundTint="#FFFFFF" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/lineTop_mySurvey"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/toolbar_mySurvey"
+        android:layout_marginTop="0dp"
+        android:alpha=".50"
+        android:background="#4D000000" />
+
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lineTop_mySurvey"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_mySurvey"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            />
+
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+</RelativeLayout>

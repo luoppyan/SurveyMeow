@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:screenOrientation="portrait"
+    tools:context=".HomeActivity"
+    >
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lineBot"
+        android:animateLayoutChanges="true">
+    </FrameLayout>
+
+    <View
+        android:id="@+id/lineBot"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/bottom_navigation"
+        android:alpha=".50"
+        android:background="#4D000000" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#E51E171A"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconTint="@drawable/selector_bottombar_text"
+        app:menu="@menu/bottom_navigation_menu" />
+
+
+</RelativeLayout>
